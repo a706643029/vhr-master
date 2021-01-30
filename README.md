@@ -45,22 +45,7 @@
 ![p280](https://raw.githubusercontent.com/wiki/lenve/vhr/doc/p280.png)
 
 系统管理员也可以管理不同角色可以操作的资源，页面如下：
-
-![p281](https://raw.githubusercontent.com/wiki/lenve/vhr/doc/p281.png)
-
-## 快速部署
-
-1. clone 项目到本地 `git@github.com:lenve/vhr.git`
-2. 数据库脚本使用 Flyway 管理，**不需要手动导入数据库脚本**，只需要提前在本地 MySQL 中创建一个空的数据库 vhr，并修改项目中关于数据的配置（resources 目录下的 application.properties 文件中）即可
-3. 提前准备好 Redis，在 项目的 application.properties 文件中，将 Redis 配置改为自己的
-4. 提前准备好 RabbitMQ，在项目的 application.properties 文件中将 RabbitMQ 的配置改为自己的（**注意，RabbitMQ 需要分别修改 mailserver 和 vhrserver 的配置文件**）
-5. 在 IntelliJ IDEA 中打开 vhr 项目，启动 mailserver 模块
-6. 运行 vhrserver 中的 vhr-web 模块
-
-**OK，至此，服务端就启动成功了，此时我们直接在地址栏输入 `http://localhost:8081/index.html` 即可访问我们的项目，如果要做二次开发，请继续看第七、八步。**
-
-7. 进入到vuehr目录中，在命令行依次输入如下命令：
-
+     
 ```
 # 安装依赖
 npm install
